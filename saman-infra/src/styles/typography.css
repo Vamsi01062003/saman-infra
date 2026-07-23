@@ -1,0 +1,37 @@
+@layer components {
+  .heading-display {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: 1.1;
+    color: var(--color-text-primary);
+  }
+
+  .heading-section {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    line-height: 1.15;
+    color: var(--color-text-primary);
+  }
+
+  .heading-card {
+    font-family: var(--font-display);
+    font-size: var(--text-l);
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+
+  .body-text {
+    font-family: var(--font-body);
+    font-size: var(--text-s);
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+}

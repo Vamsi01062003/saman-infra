@@ -1,0 +1,67 @@
+/**
+ * DESIGN TOKENS — single source of truth.
+ *
+ * Semantic names are canonical and must never change without a deliberate
+ * design decision. Implementation values (hex codes, px values) may evolve
+ * without touching component code, because components only ever consume
+ * the semantic name (via Tailwind's token-mapped classes), never a raw value.
+ *
+ * --color-accent below is a NEUTRAL PLACEHOLDER. It must be replaced with
+ * the client's real brand color once the asset audit is complete — do not
+ * ship this placeholder to production.
+ */
+
+:root {
+  /* Color — 2 neutrals, 1 dark neutral, 1 accent. No exceptions. */
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f6f5f3;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #5c5c5c;
+  --color-border: #e4e2de;
+
+  /* PLACEHOLDER — swap for audited client brand color before launch */
+  --color-accent: #2b4c3f;
+  --color-accent-hover: #223d33;
+
+  /* Semantic state color — form validation errors only. Still a
+     token, not a raw value: no component may reach for an
+     un-tokenized color even for error states. */
+  --color-danger: #b3261e;
+
+  /* Spacing — 8px base unit, multiples only */
+  --space-xs: 8px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 48px;
+  --space-2xl: 96px;
+
+  /* Radius — one value, used everywhere or nowhere. Sharp, not trend-rounded. */
+  --radius-s: 2px;
+
+  /* Shadow — one soft elevation, cards only */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  /* Typography scale */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-xs: 14px;
+  --text-s: 16px;
+  --text-m: 20px;
+  --text-l: 28px;
+  --text-xl: 40px;
+  --text-2xl: 56px;
+
+  /* Motion — one duration, one easing. Hover/focus and reveal only. */
+  --motion-duration: 180ms;
+  --motion-easing: ease-out;
+
+  /* Layout */
+  --max-content-width: 1200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration: 0ms;
+  }
+}
